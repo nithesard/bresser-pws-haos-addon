@@ -59,6 +59,14 @@ def receive_data():
 		"uv": float(request.query.UV),
 		"temperature_indoor_f": float(request.query.indoortempf),
 		"temperature_indoor_c": f_to_c(request.query.indoortempf),
+		"soiltempf": float(request.query.soiltempf),
+        "soilmoisture": float(request.query.soilmoisture),
+        "soiltemp2f": float(request.query.soiltemp2f),
+        "soilmoisture2": float(request.query.soilmoisture2),
+        "soiltemp3f": float(request.query.soiltemp3f),
+        "soilmoisture3": float(request.query.soilmoisture3),
+        "soiltemp4f": float(request.query.soiltemp4f),
+        "soilmoisture4": float(request.query.soilmoisture4),
 		"humidity_indoor": int(request.query.indoorhumidity),
 	})
 	_stderr('%s\n'%(','.join(str(current_data[k]) for k in LOGGED_KEYS)))
